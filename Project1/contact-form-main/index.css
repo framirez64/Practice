@@ -14,6 +14,7 @@ body {
 
 /* Container to center form */
 .form {
+    
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +36,15 @@ body {
   border: 1px solid hsl(186, 15%, 60%); /* grey outline */
   border-radius: 0.5rem; /* rounded corners */
   cursor: pointer; 
+}
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields input {
+  flex: 1; /* makes each input take equal space */
+  width: 100%; /* ensures it fills its flex item */
 }
 
 /* Form styling */
@@ -70,8 +80,9 @@ input[type="email"] {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  border: 1px solid #dbdbdb;
+  border: 1px solid hsl(186, 15%, 60%); /* grey outline */
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 /* Radio inputs */
