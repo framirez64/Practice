@@ -1,0 +1,106 @@
+/* ========== Base Styles (Mobile First) ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container to center form */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* vertically centers on full screen */
+  padding: 1rem;
+}
+.radio-group {
+  display: flex;
+  gap: 1rem; /* spacing between options */
+  margin-top: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between the circle and text */
+  font-weight: 400;
+  padding: 0.75rem 1rem; /* space inside the box */
+  border: 1px solid hsl(186, 15%, 60%); /* grey outline */
+  border-radius: 0.5rem; /* rounded corners */
+  cursor: pointer; 
+}
+
+/* Form styling */
+form {
+    
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 375px; /* mobile design */
+}
+
+/* Headings */
+h1 {
+  font-weight: 700;
+  margin-top: 0;
+  color:hsl(187, 24%, 22%);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 400;
+  color:hsl(187, 24%, 22%);
+  
+}
+
+/* Text + email inputs */
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+/* Radio inputs */
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+/* Attribution footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ========== Desktop Styles (Breakpoint) ========== */
+@media (min-width: 1024px) {
+  form {
+    max-width: 600px; /* bigger form for desktop */
+  }
+
+  /* Example: side-by-side fields for first/last name */
+  .name-fields {
+    display: flex;
+    gap: 1rem;
+  }
+  .name-fields input {
+    flex: 1;
+  }
+}
