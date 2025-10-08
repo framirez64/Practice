@@ -1,0 +1,7 @@
+.summary-box{
+    font-size: 18;
+    font-family: HankenGrotesk;
+    background-color: hsl(0, 100%, 45%);
+    border-color:black;
+    border-radius: 50%;
+}
