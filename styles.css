@@ -1,7 +1,91 @@
-.summary-box{
-    font-size: 18;
-    font-family: HankenGrotesk;
-    background-color: hsl(0, 100%, 45%);
-    border-color:black;
-    border-radius: 50%;
+/* --- Reset / minimal base --- */
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; }
+
+/* --- The component itself --- */
+.card {
+  display: grid;
+  grid-template-columns: 1fr;      /* stack by default */
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  max-width: 760px;
 }
+
+/* Desktop two-column layout */
+@media (min-width: 768px) {
+  .card { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- Left half: Result --- */
+.result {
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: #fff;
+  text-align: center;
+  padding: 32px;
+  display: grid;
+  place-items: center;
+  gap: 16px;
+}
+
+.score {
+  width: 160px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 30%, hsl(256 72% 46% / .9), hsl(241 72% 46% / 0) 70%);
+  display: grid;
+  place-items: center;
+}
+
+.score__big { font-size: 3rem; font-weight: 800; }
+.score__of  { opacity: 0.7; font-weight: 600; }
+
+.result__title { font-size: 1.3rem; font-weight: 700; }
+.result__body  { margin: 0; max-width: 26ch; opacity: 0.8; }
+
+/* --- Right half: Summary --- */
+.summary {
+  padding: 32px;
+  display: grid;
+  gap: 16px;
+}
+
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.summary-item .score { color: hsl(224 30% 27%); }
+.summary-item .denom { opacity: 0.5; }
+
+.summary-item--reaction { background: hsl(0 100% 67% / .08); color: hsl(0 100% 40%); }
+.summary-item--memory   { background: hsl(39 100% 56% / .08); color: hsl(39 100% 35%); }
+.summary-item--verbal   { background: hsl(166 100% 37% / .08); color: hsl(166 100% 25%); }
+.summary-item--visual   { background: hsl(234 85% 45% / .08); color: hsl(234 85% 35%); }
+
+/* --- Continue button --- */
+.cta {
+  margin-top: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 999px;
+  background: hsl(224 30% 27%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cta:hover { filter: brightness(1.05); }

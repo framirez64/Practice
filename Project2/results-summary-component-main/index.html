@@ -13,35 +13,44 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>  
-  <div class="summary-box">
-      <h3>Summary</h3>
-      <li class="results">
-        <ul>Reaction</ul>
-        <ul>Memory</ul>
-        <ul>Verbal</ul>
-        <ul>Visual</ul>
-      </li>
-      Reaction
-      80 / 100
 
-      Memory
-      92 / 100
-
-      Verbal
-      61 / 100
-
-      Visual
-      72 / 100
-
-      Continue
-      <div class="results-box">
-        <h3> Your result </h3>
-          76
-          of 100
-        <h3> Great 
-            You scored higher than 65% of the people who have taken these tests.
-        </h3>
-      </div>
+<div class="card">
+  <div class="result">
+    <h2>Your Result</h2>
+    <div class="score">
+      <div class="score__big">76</div>
+      <div class="score__of">of 100</div>
+    </div>
+    <div class="result__title">Great</div>
+    <p class="result__body">
+      You scored higher than 65% of the people who have taken these tests.
+    </p>
   </div>
+
+  <div class="summary">
+    <h2>Summary</h2>
+    <ul class="summary-list">
+      <li class="summary-item summary-item--reaction">
+        <span class="label">Reaction</span>
+        <span class="score"><strong>80</strong> <span class="denom">/ 100</span></span>
+      </li>
+      <li class="summary-item summary-item--memory">
+        <span class="label">Memory</span>
+        <span class="score"><strong>92</strong> <span class="denom">/ 100</span></span>
+      </li>
+      <li class="summary-item summary-item--verbal">
+        <span class="label">Verbal</span>
+        <span class="score"><strong>61</strong> <span class="denom">/ 100</span></span>
+      </li>
+      <li class="summary-item summary-item--visual">
+        <span class="label">Visual</span>
+        <span class="score"><strong>72</strong> <span class="denom">/ 100</span></span>
+      </li>
+    </ul>
+    <button class="cta" type="button">Continue</button>
+  </div>
+</div>
+
+
 </body>
 </html>
